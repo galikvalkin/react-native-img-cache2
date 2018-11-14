@@ -1,6 +1,6 @@
 {
   "name": "react-native-img-cache2",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Fork of CachedImage component for React native to change react-native-fetch-blob dep to rn-fetch-blob",
   "main": "build/index.js",
   "typings": "build/index.d.ts",

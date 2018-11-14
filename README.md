@@ -1,6 +1,6 @@
 # React Native Image Cache
 
-This is a fork of https://github.com/wcandillon/react-native-img-cache, but with the `react-native-fetch-blob` dependency chanced to `rn-fetch-blob`. The [original repo](https://github.com/wcandillon/react-native-img-cache) is no longer being maintained, so the npm package has not been updated to use the fixed dependency.
+This is a fork of https://github.com/wcandillon/react-native-img-cache, but with the `react-native-fetch-blob` dependency changed to `rn-fetch-blob`. The [original repo](https://github.com/wcandillon/react-native-img-cache) is no longer being maintained, so the npm package has not been updated to use the fixed dependency.
 
 To install this version:
 
