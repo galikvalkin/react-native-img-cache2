@@ -1,12 +1,12 @@
 {
   "name": "react-native-img-cache2",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Fork of CachedImage component for React native to change react-native-fetch-blob dep to rn-fetch-blob",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "scripts": {
     "lint": "tslint --project tsconfig.json",
-    "build": "tsc --pretty",
+    "build": "tsc --pretty --skipLibCheck",
     "watch": "tsc --watch --pretty",
     "test": "npm run lint && npm run build",
     "release": "semantic-release pre && npm publish && semantic-release post"
@@ -30,8 +30,8 @@
   },
   "homepage": "https://github.com/snobear/react-native-img-cache2#readme",
   "devDependencies": {
-    "@types/react": "^16.0.5",
-    "@types/react-native": "^0.49.2",
+    "@types/react": "^16.7.5",
+    "@types/react-native": "^0.55.3",
     "condition-circle": "^1.5.0",
     "semantic-release": "^6.3.2",
     "ts-npm-lint": "^0.1.0",
@@ -39,7 +39,8 @@
     "typescript": "^2.1.6"
   },
   "dependencies": {
-    "crypto-js": "^3.1.9-1"
+    "crypto-js": "^3.1.9-1",
+    "react-native-img-cache2": "^0.0.2"
   },
   "release": {
     "verifyConditions": "condition-circle"
