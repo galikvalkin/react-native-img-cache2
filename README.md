@@ -1,5 +1,15 @@
 # React Native Image Cache
 
+This is a fork of https://github.com/wcandillon/react-native-img-cache, but with the `react-native-fetch-blob` dependency chanced to `rn-fetch-blob`. The [original repo](https://github.com/wcandillon/react-native-img-cache) is no longer being maintained, so the npm package has not been updated to use the fixed dependency.
+
+To install this version:
+
+```
+npm install --save react-native-img-cache2
+```
+
+# Original repo README (with some references to package name updated to react-native-img-cache2):
+
 [![CircleCI](https://circleci.com/gh/wcandillon/react-native-img-cache.svg?style=svg)](https://circleci.com/gh/wcandillon/react-native-img-cache)
 [![npm version](https://badge.fury.io/js/react-native-img-cache.svg)](https://badge.fury.io/js/react-native-img-cache)
 
@@ -21,7 +31,7 @@ This package has a dependency with [react-native-fetch-blob](https://github.com/
 If your project doesn't have a dependency with this package already, please refer to [their installation instructions](https://github.com/wkh237/react-native-fetch-blob#user-content-installation).
 
 ```bash
-npm install react-native-img-cache --save
+npm install react-native-img-cache2 --save
 ```
 
 ## Usage
@@ -34,7 +44,7 @@ The `CachedImage` component assumes that the image URI will never change. The im
 * The `body` property in `source` is not supported. Please file an issue if that's something you would like to see supported.
 
 ```jsx
-import {CachedImage} from "react-native-img-cache";
+import {CachedImage} from "react-native-img-cache2";
 
 <CachedImage source={{ uri: "https://i.ytimg.com/vi/yaqe1qesQ8c/maxresdefault.jpg" }} />
 ```
@@ -42,7 +52,7 @@ import {CachedImage} from "react-native-img-cache";
 The `mutable` property implies assumes that the image URI can change over time. The lifetime of this cache is the one of the running application and it can be manually busted using `ImageCache`.
 
 ```jsx
-import {CachedImage} from "react-native-img-cache";
+import {CachedImage} from "react-native-img-cache2";
 
 <CachedImage source={{ uri: "https://i.ytimg.com/vi/yaqe1qesQ8c/maxresdefault.jpg" }} mutable />
 ```
@@ -53,18 +63,18 @@ By default, the `CachedImage` component is using the [standard RN Image componen
 It is possible however to use a different component via `CustomCachedImage`. In the example below, we use the `Image` component from [react-native-image-progress](https://github.com/oblador/react-native-image-progress).
 
 ```jsx
-import {CustomCachedImage} from "react-native-img-cache";
+import {CustomCachedImage} from "react-native-img-cache2";
 
 import Image from 'react-native-image-progress';
 import ProgressBar from 'react-native-progress/Bar';
 
 <CustomCachedImage
   component={Image}
-  source={{ uri: 'http://loremflickr.com/640/480/dog' }} 
-  indicator={ProgressBar} 
+  source={{ uri: 'http://loremflickr.com/640/480/dog' }}
+  indicator={ProgressBar}
   style={{
-    width: 320, 
-    height: 240, 
+    width: 320,
+    height: 240,
   }}/>
 ```
 
@@ -124,7 +134,7 @@ ImageCache.get().dispose(uri, observer);
 With jest, testing a snapshot can generate errors. Jest doesn't know how to generate the component CachedImage. For fix this, you have to mock CachedImage with Image component.
 
 ```js
-jest.mock('react-native-img-cache', () => {
+jest.mock('react-native-img-cache2', () => {
   const mockComponent = require('react-native/jest/mockComponent')
   return {
     CustomCachedImage: mockComponent('Image'),

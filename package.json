@@ -1,7 +1,7 @@
 {
-  "name": "react-native-img-cache",
+  "name": "react-native-img-cache2",
   "version": "0.0.0-development",
-  "description": "CachedImage component for React native",
+  "description": "Fork of CachedImage component for React native to change react-native-fetch-blob dep to rn-fetch-blob",
   "main": "build/index.js",
   "typings": "build/index.d.ts",
   "scripts": {
@@ -16,7 +16,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/wcandillon/react-native-img-cache.git"
+    "url": "https://github.com/snobear/react-native-img-cache2.git"
   },
   "keywords": [
     "react",
@@ -26,9 +26,9 @@
   "author": "William Candillon <wcandillon@gmail.com>",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/wcandillon/react-native-img-cache/issues"
+    "url": "https://github.com/snobear/react-native-img-cache2/issues"
   },
-  "homepage": "https://github.com/wcandillon/react-native-img-cache#readme",
+  "homepage": "https://github.com/snobear/react-native-img-cache2#readme",
   "devDependencies": {
     "@types/react": "^16.0.5",
     "@types/react-native": "^0.49.2",
