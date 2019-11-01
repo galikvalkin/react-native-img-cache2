@@ -196,7 +196,7 @@ export abstract class BaseCachedImage<P extends CachedImageProps> extends Compon
         return source;
     }
 
-    componentWillMount() {
+    componentDidMount() {
         const {mutable} = this.props;
         const source = this.checkSource(this.props.source);
         this.setState({ path: undefined });
@@ -205,9 +205,9 @@ export abstract class BaseCachedImage<P extends CachedImageProps> extends Compon
         }
     }
 
-    componentWillReceiveProps(nextProps: P) {
-        const {mutable} = nextProps;
-        const source = this.checkSource(nextProps.source);
+    componentDidUpdate() {
+        const {mutable} = this.props;
+        const source = this.checkSource(this.props.source);
         if (typeof(source) !== "number" && source.uri) {
             this.observe(source as CachedImageURISource, mutable === true);
         }
